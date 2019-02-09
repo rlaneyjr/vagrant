@@ -1,0 +1,125 @@
+{
+  "version": "1",
+  "installed": {
+    "vagrant-azure": {
+      "ruby_version": "2.4.4",
+      "vagrant_version": "2.1.4",
+      "gem_version": "",
+      "require": "",
+      "sources": [
+        "https://rubygems.org/",
+        "https://gems.hashicorp.com/"
+      ],
+      "installed_gem_version": "2.0.0",
+      "env_local": false
+    },
+    "vagrant-aws": {
+      "ruby_version": "2.4.4",
+      "vagrant_version": "2.1.4",
+      "gem_version": "",
+      "require": "",
+      "sources": [
+        "https://rubygems.org/",
+        "https://gems.hashicorp.com/"
+      ],
+      "installed_gem_version": "0.7.2",
+      "env_local": false
+    },
+    "vagrant-digitalocean": {
+      "ruby_version": "2.4.4",
+      "vagrant_version": "2.1.4",
+      "gem_version": "",
+      "require": "",
+      "sources": [
+        "https://rubygems.org/",
+        "https://gems.hashicorp.com/"
+      ],
+      "installed_gem_version": "0.9.3",
+      "env_local": false
+    },
+    "vagrant-vmware-appcatalyst": {
+      "ruby_version": "2.4.4",
+      "vagrant_version": "2.1.4",
+      "gem_version": "",
+      "require": "",
+      "sources": [
+        "https://rubygems.org/",
+        "https://gems.hashicorp.com/"
+      ],
+      "installed_gem_version": "1.1.1",
+      "env_local": false
+    },
+    "vagrant-vmware-esxi": {
+      "ruby_version": "2.4.4",
+      "vagrant_version": "2.1.4",
+      "gem_version": "",
+      "require": "",
+      "sources": [
+        "https://rubygems.org/",
+        "https://gems.hashicorp.com/"
+      ],
+      "installed_gem_version": "2.4.1",
+      "env_local": false
+    },
+    "vagrant-vsphere": {
+      "ruby_version": "2.4.4",
+      "vagrant_version": "2.1.4",
+      "gem_version": "",
+      "require": "",
+      "sources": [
+        "https://rubygems.org/",
+        "https://gems.hashicorp.com/"
+      ],
+      "installed_gem_version": "1.13.2",
+      "env_local": false
+    },
+    "vagrant-linode": {
+      "ruby_version": "2.4.4",
+      "vagrant_version": "2.1.4",
+      "gem_version": "",
+      "require": "",
+      "sources": [
+        "https://rubygems.org/",
+        "https://gems.hashicorp.com/"
+      ],
+      "installed_gem_version": "0.4.0",
+      "env_local": false
+    },
+    "vagrant-packet": {
+      "ruby_version": "2.4.4",
+      "vagrant_version": "2.1.4",
+      "gem_version": "",
+      "require": "",
+      "sources": [
+        "https://rubygems.org/",
+        "https://gems.hashicorp.com/"
+      ],
+      "installed_gem_version": "0.1.6",
+      "env_local": false
+    },
+    "vagrant-docker-compose": {
+      "ruby_version": "2.4.4",
+      "vagrant_version": "2.1.4",
+      "gem_version": "",
+      "require": "",
+      "sources": [
+        "https://rubygems.org/",
+        "https://gems.hashicorp.com/"
+      ],
+      "installed_gem_version": "1.3.0",
+      "env_local": false
+    },
+    "vagrant-aws-dns": {
+      "ruby_version": "2.4.4",
+      "vagrant_version": "2.1.4",
+      "gem_version": "",
+      "require": "",
+      "sources": [
+        "https://rubygems.org/",
+        "https://gems.hashicorp.com/"
+      ],
+      "installed_gem_version": "0.2.6",
+      "env_local": false
+    }
+  }
+}

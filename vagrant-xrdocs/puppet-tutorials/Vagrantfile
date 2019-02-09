@@ -1,0 +1,25 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+
+Vagrant.configure(2) do |config|
+
+  config.vm.provision "shell", inline: "echo Hello User"
+
+  config.vm.define "puppetmaster" do |pm|
+    pm.vm.box = "ubuntu/xenial64"
+    pm.vm.network :private_network, virtualbox__intnet: "link1", ip: "10.1.1.10"
+    pm.vm.provider :virtualbox do |vb|
+      vb.customize ["modifyvm", :id,"--name", "Puppet-Master","--memory", "4096"]
+    end
+  end
+
+  config.vm.define "iosxrv" do |xrv|
+    xrv.vm.box = "IOS-XRv"
+    xrv.vm.network :private_network, auto_config: false, virtualbox__intnet: "link1", ip: "10.1.1.20"
+    xrv.vm.provider :virtualbox do |vb|
+      vb.customize ["modifyvm", :id,"--name", "IOS-XRv"]
+    end
+  end
+
+end

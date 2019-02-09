@@ -1,0 +1,41 @@
+---
+- hosts: ss-xr
+
+  tasks:
+  - name: Copy XML file
+    copy: src=/home/vagrant/xr-lxc-app.xml dest=/home/vagrant/xr-lxc-app.xml owner=vagrant force=no
+
+  - name: Copy rootfs tar ball
+    copy: src=/home/vagrant/xr-lxc-app-rootfs.tar.gz dest=/misc/app_host/scratch/xr-lxc-app-rootfs.tar.gz owner=vagrant force=no
+
+  - name: Create rootfs directory
+    file: path=/misc/app_host/xr-lxc-app/rootfs state=directory
+    become: yes
+
+  - command: tar -zxf /misc/app_host/scratch/xr-lxc-app-rootfs.tar.gz -C /misc/app_host/xr-lxc-app/rootfs
+    become: yes
+    register: output
+    ignore_errors: yes
+  - debug: var=output.stdout_lines
+
+  - name: grep
+    shell: sudo -i virsh list | grep xr-lxc-app
+    args:
+      warn: no
+    register: container_exist
+    ignore_errors: yes
+  - debug: var=output.stdout_lines
+
+  - name: virsh create
+    shell: sudo -i virsh  create /home/vagrant/xr-lxc-app.xml
+    args:
+      warn: no
+    register: output
+    when: " container_exist | failed "
+  - debug: var=output.stdout_lines
+
+  - shell: sudo -i virsh list
+    args:
+      warn: no
+    register: output
+  - debug: var=output.stdout_lines

@@ -1,0 +1,6 @@
+venv/
+*.pyc
+created_boxes/
+Vagrantfile
+*.iso
+*.box
